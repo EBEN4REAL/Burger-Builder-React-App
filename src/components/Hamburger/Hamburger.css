@@ -1,0 +1,21 @@
+.Hamburger {
+    height: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+img{
+    height: 100%;
+}
+
+.Hamburger .drawerToggle {
+    height: 2px;
+    background-color: white;
+    width: 50px;
+    margin: 10px 0;
+}
+
+@media (min-width: 500px) {
+    .Hamburger{
+        display: none;
+    } 
+}

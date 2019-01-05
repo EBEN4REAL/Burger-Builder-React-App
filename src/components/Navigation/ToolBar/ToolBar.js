@@ -2,11 +2,12 @@ import React from 'react';
 import  './Toolbar.css';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
+import Hamburger from '../../Hamburger/Hamburger';
 
 const toolbar = (props) => {
     return (
         <header className="ToolBar">
-            <div>MENU</div>
+            <Hamburger clicked={props.openSideBar} />
             <Logo />
             <nav className="DesktopOnly">
                 <NavigationItems />
