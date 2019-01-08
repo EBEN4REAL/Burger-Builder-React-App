@@ -1,13 +1,13 @@
 import React from 'react';
-import './Hamburger.css';
+import classes from './Hamburger.css';
 import Hamburger from '../../assets/images/hamburger.png';
 
 const hamburger = (props) => {
     return (
-        <div className="Hamburger" onClick={props.clicked}>
-            <div className="drawerToggle"></div>
-            <div className="drawerToggle"></div>
-            <div className="drawerToggle"></div>
+        <div className={classes.Hamburger} onClick={props.clicked}>
+            <div className={classes.drawerToggle}></div>
+            <div className={classes.drawerToggle}></div>
+            <div className={classes.drawerToggle}></div>
         </div>
     )
 }

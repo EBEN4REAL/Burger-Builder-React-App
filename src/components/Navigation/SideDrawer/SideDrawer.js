@@ -1,15 +1,15 @@
 import React from 'react';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
-import './SideDraw.css';
+import classes from './SideDraw.css';
 import BackDrop from '../../UI/Backdrop/Backdrop';
 import Aux from '../../../hoc/Auxi';
 
 
 const sideDrawer = (props) => {
-    let attachClasses = ["SideDrawer", "Close"];
+    let attachClasses = [classes.SideDrawer, classes.Close];
     if(props.open){
-        attachClasses = ["SideDrawer", "Open"];
+        attachClasses = [classes.SideDrawer, classes.Open];
     }
     return (
         <Aux>

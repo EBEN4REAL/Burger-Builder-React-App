@@ -1,15 +1,15 @@
 import React from 'react';
-import  './Toolbar.css';
+import classes from  './Toolbar.css';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import Hamburger from '../../Hamburger/Hamburger';
 
 const toolbar = (props) => {
     return (
-        <header className="ToolBar">
+        <header className={classes.ToolBar}>
             <Hamburger clicked={props.openSideBar} />
             <Logo />
-            <nav className="DesktopOnly">
+            <nav className={classes.DesktopOnly}>
                 <NavigationItems />
             </nav>
         </header>
