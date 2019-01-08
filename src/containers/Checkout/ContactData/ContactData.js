@@ -25,13 +25,14 @@ class ContactData extends Component {
             ingredients: this.props.ingredients,
             price: this.state.totalPrice,
             customer: {
-                name: 'Eben',
+                name: event.name,
                 address: {
                     street: "Agiliti",
                     country: "Nigeria"
                 },
                 email: "eben@gmail.com",
-                deliveryMethod: "fastest"
+                deliveryMethod: "fastest",
+                price: this.state.totalPrice
             },
 
         }
