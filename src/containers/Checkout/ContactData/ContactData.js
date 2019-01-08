@@ -5,7 +5,7 @@ import {withRouter} from 'react-router-dom';
 
 import Button from '../../../components/UI/Button/Button';
 import Spinner from '../../../components/UI/Spinner/Spinner';
-import  './ContactData.css';
+import  classes from './ContactData.css';
 
 class ContactData extends Component {
     state = {
@@ -54,10 +54,10 @@ class ContactData extends Component {
     render(){
         let form = (
             <form>
-                <input type="text" name="name" placeholder="Name" className="ContactForm" />
-                <input type="email" name="name" placeholder="Email" className="ContactForm" />
-                <input type="text" name="street" placeholder="Street" className="ContactForm" />
-                <input type="text" name="postal" placeholder="Postal" className="ContactForm" />
+                <input type="text" name="name" placeholder="Name" className={classes.ContactForm} />
+                <input type="email" name="name" placeholder="Email" className={classes.ContactForm} />
+                <input type="text" name="street" placeholder="Street" className={classes.ContactForm} />
+                <input type="text" name="postal" placeholder="Postal" className={classes.ContactForm} />
                 <Button btnType="success" clicked={this.orderHandler}>ORDER</Button>
             </form>
         );
@@ -65,7 +65,7 @@ class ContactData extends Component {
             form = <Spinner />
         }
         return (
-            <div className="Contactdata">
+            <div className={classes.Contactdata}>
                 <h4>Enter your contact Data</h4>
                 {form}
             </div>
