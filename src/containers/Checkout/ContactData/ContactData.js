@@ -6,6 +6,7 @@ import {withRouter} from 'react-router-dom';
 import Button from '../../../components/UI/Button/Button';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import  classes from './ContactData.css';
+import Input from '../../../components/UI/Input/Input';
 
 class ContactData extends Component {
     state = {
@@ -57,11 +58,12 @@ class ContactData extends Component {
     render(){
         let form = (
             <form>
-                <input type="text" name="name" placeholder="Name" className={classes.ContactForm} />
-                <input type="email" name="name" placeholder="Email" className={classes.ContactForm} />
-                <input type="text" name="street" placeholder="Street" className={classes.ContactForm} />
-                <input type="text" name="postal" placeholder="Postal" className={classes.ContactForm} />
-                <Button btnType="success" clicked={this.orderHandler}>ORDER</Button>
+                <h4>Enter your contact Data</h4>
+                <Input inputtype="input"  type="text" name="name" placeholder="Name" />
+                <Input inputtype="input" name="name" type="email" placeholder="Email" />
+                <Input inputtype="input" name="street" type="text" placeholder="Street" />
+                <Input inputtype="input" name="postal"  type="text" placeholder="Postal" />
+                <Button btnType="Success" clicked={this.orderHandler}>ORDER</Button>
             </form>
         );
         if(this.state.loading){
@@ -69,7 +71,6 @@ class ContactData extends Component {
         }
         return (
             <div className={classes.Contactdata}>
-                <h4>Enter your contact Data</h4>
                 {form}
             </div>
         )
