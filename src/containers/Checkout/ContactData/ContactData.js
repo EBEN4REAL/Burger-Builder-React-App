@@ -23,7 +23,7 @@ class ContactData extends Component {
         });
         const order = {
             ingredients: this.props.ingredients,
-            price: this.state.totalPrice,
+            price: this.props.price,
             customer: {
                 name: event.name,
                 address: {
@@ -32,7 +32,6 @@ class ContactData extends Component {
                 },
                 email: "eben@gmail.com",
                 deliveryMethod: "fastest",
-                price: this.state.totalPrice
             },
 
         }
@@ -51,6 +50,9 @@ class ContactData extends Component {
                 );
          })
         console.log(this.props.ingredients);
+    }
+    componentDidMount(){
+        console.log(this.props);
     }
     render(){
         let form = (

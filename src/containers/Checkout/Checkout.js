@@ -7,7 +7,7 @@ import ContactData from './ContactData/ContactData';
 class Checkout extends Component {
     state = {
         ingredients: null,
-        totalPrice: null
+        totalPrice: 0
     }
     componentWillMount(){
         console.log(this.props);
@@ -30,6 +30,7 @@ class Checkout extends Component {
                 totalPrice: price
             }
         );
+        console.log(price);
          console.log(this.state.ingredients);
     }
     checkoutCancelledHandler = () => {
