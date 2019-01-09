@@ -13,7 +13,16 @@ const order = (props) => {
 
     const ingredientsJsx = ingredients.map(ig => {
         return (
-            <span key={ig.name}>{ig.name.charAt(0).toUpperCase() + ig.name.substr(1)} {ig.amount} | </span>
+            <span 
+                style={
+                    { 
+                        "border": "1px solid #ccc",
+                        "margin": "5px",
+                        "border-radius": "5px",
+                        "padding": "5px"
+                     }
+                }
+                key={ig.name}>{ig.name.charAt(0).toUpperCase() + ig.name.substr(1)} {ig.amount} </span>
         )
     })
     return (
